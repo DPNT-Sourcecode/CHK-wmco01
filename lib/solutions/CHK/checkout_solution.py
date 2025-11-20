@@ -37,6 +37,7 @@ class CheckoutSolution:
             "A": [(5, 200), (3, 130)],
             "B": [(2, 45)],
             "H": [(10, 80), (5, 45)],
+            "P": [(5, 200)],
             "K": [(2, 150)],
             "B": [(5, 200)],
             "Q": [(3, 80)],
@@ -65,7 +66,7 @@ class CheckoutSolution:
                 counts["Q"] = max(0, counts["Q"] - free_q)
         if "U" in counts:
             free_u = counts["U"] // 4
-            counts["U"] = counts["U"] - free_u  
+            counts["U"] = counts["U"] - free_u
         
 
         for item, cnt in counts.items():
