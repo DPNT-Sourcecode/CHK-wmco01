@@ -12,8 +12,8 @@ class CheckoutSolution:
             "D": 15
         }
         offers = {
-            "A": (3, 130),
-            "B": (2, 45)
+            "A": [(5, 200), (3, 130)],
+            "B": [(2, 45)]
         }
         counts = {}
         for ch in skus:
@@ -39,6 +39,3 @@ class CheckoutSolution:
 # print(solution.checkout("AAABBB"))
 # print(solution.checkout("AAAABB12"))
 # print(solution.checkout(""))
-
-
-
