@@ -67,6 +67,22 @@ class CheckoutSolution:
         if "U" in counts:
             free_u = counts["U"] // 4
             counts["U"] = counts["U"] - free_u
+
+        group_items = ["S", "T", "X", "Y", "Z"]
+        group_counts = []
+
+        for item in group_items:
+            for item in counts:
+                for _ in range(counts[item]):
+                    group_counts.append(prices[item])
+                counts[item] = 0
+        
+        group_counts.sort(reverse=True)
+
+        while len(group_counts) >= 3:
+            total += 45
+            group_counts = group_counts[3:]
+
         
 
         for item, cnt in counts.items():
@@ -140,6 +156,7 @@ print(solution.checkout("BB"))
 # | Y    | 10    |                        |
 # | Z    | 50    |                        |
 # +------+-------+------------------------
+
 
 
 
