@@ -3,7 +3,7 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus):
-        if skus is None or skus == "":
+        if skus is None:
             return -1
         prices = {
             "A": 50,
@@ -39,5 +39,6 @@ class CheckoutSolution:
 # print(solution.checkout("AAABBB"))
 # print(solution.checkout("AAAABB12"))
 # print(solution.checkout(""))
+
 
 
