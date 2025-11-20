@@ -77,7 +77,6 @@ class CheckoutSolution:
                     total += times * price
                     remaining -= times * quality
                 total += remaining * prices[item]
-                    
             else:
                 total += cnt * prices[item]
         return total
@@ -105,7 +104,7 @@ solution = CheckoutSolution()
 # print(solution.checkout("FFFFF"))
 # print(solution.checkout("FFFFFF"))
 
-# print(solution.checkout("F"))
+print(solution.checkout("BB"))
 # print(solution.checkout("FF"))
 # print(solution.checkout("FFF"))
 # print(solution.checkout("FFFF"))
@@ -141,3 +140,4 @@ solution = CheckoutSolution()
 # | Y    | 10    |                        |
 # | Z    | 50    |                        |
 # +------+-------+------------------------
+
