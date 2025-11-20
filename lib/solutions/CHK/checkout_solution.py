@@ -12,7 +12,7 @@ class CheckoutSolution:
             "D": 15
         }
         offers = {
-            "A": (3, 150),
+            "A": (3, 130),
             "B": (2, 45)
         }
         counts = {}
@@ -31,9 +31,13 @@ class CheckoutSolution:
             else:
                 total += cnt * prices[item]
         return total
-print(CheckoutSolution.checkout("A"))
-print(CheckoutSolution.checkout("AAA"))
-print(CheckoutSolution.checkout("AAA"))
-
+# solution = CheckoutSolution()
+# print(solution.checkout("A"))
+# print(solution.checkout("AAA"))
+# print(solution.checkout("AAAA"))
+# print(solution.checkout("ABCD"))
+# print(solution.checkout("AAABBB"))
+# print(solution.checkout("AAAABB12"))
+# print(solution.checkout(""))
 
 
