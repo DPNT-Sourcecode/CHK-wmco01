@@ -61,5 +61,11 @@ solution = CheckoutSolution()
 # print(solution.checkout("EEBB"))
 # print(solution.checkout("ABCDE"))
 # print(solution.checkout("A123"))
+# print(solution.checkout("F"))
+# print(solution.checkout("FF"))
+# print(solution.checkout("FFF"))
+# print(solution.checkout("FFFF"))
+# print(solution.checkout("FFFFF"))
+# print(solution.checkout("FFFFFF"))
 
 
