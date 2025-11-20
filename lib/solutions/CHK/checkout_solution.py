@@ -10,7 +10,8 @@ class CheckoutSolution:
             "B": 30,
             "C": 20,
             "D": 15,
-            "E": 40
+            "E": 40,
+            "F": 10
         }
         offers = {
             "A": [(5, 200), (3, 130)],
@@ -26,6 +27,10 @@ class CheckoutSolution:
             free_b = counts["E"] // 2
             if "B" in counts:
                 counts["B"] = max(0, counts["B"] - free_b)
+        if "F" in counts:
+            free_f = counts["F"] // 3
+            counts["F"] = counts["F"] - free_f
+        
 
         for item, cnt in counts.items():
             if item in offers:
@@ -56,4 +61,5 @@ solution = CheckoutSolution()
 # print(solution.checkout("EEBB"))
 # print(solution.checkout("ABCDE"))
 # print(solution.checkout("A123"))
+
 
