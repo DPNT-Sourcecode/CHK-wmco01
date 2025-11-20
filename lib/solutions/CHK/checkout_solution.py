@@ -55,6 +55,17 @@ class CheckoutSolution:
         if "F" in counts:
             free_f = counts["F"] // 3
             counts["F"] = counts["F"] - free_f
+        if "N" in counts:
+            free_m = counts["N"] // 3
+            if "M" in counts:
+                counts["M"] = max(0, counts["M"] - free_m)
+        if "R" in counts:
+            free_q = counts["R"] // 3
+            if "Q" in counts:
+                counts["Q"] = max(0, counts["Q"] - free_q)
+        if "U" in counts:
+            free_u = counts["U"] // 4
+            counts["U"] = counts["U"] - free_u  
         
 
         for item, cnt in counts.items():
@@ -92,6 +103,13 @@ solution = CheckoutSolution()
 # print(solution.checkout("FFFF"))
 # print(solution.checkout("FFFFF"))
 # print(solution.checkout("FFFFFF"))
+
+# print(solution.checkout("F"))
+# print(solution.checkout("FF"))
+# print(solution.checkout("FFF"))
+# print(solution.checkout("FFFF"))
+# print(solution.checkout("FFFFF"))
+# print(solution.checkout("FFFFFF"))
 # +------+-------+------------------------+
 # | Item | Price | Special offers         |
 # +------+-------+------------------------+
@@ -122,6 +140,3 @@ solution = CheckoutSolution()
 # | Y    | 10    |                        |
 # | Z    | 50    |                        |
 # +------+-------+------------------------
-
-
-
