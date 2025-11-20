@@ -9,7 +9,8 @@ class CheckoutSolution:
             "A": 50,
             "B": 30,
             "C": 20,
-            "D": 15
+            "D": 15,
+            "E": 40
         }
         offers = {
             "A": [(5, 200), (3, 130)],
@@ -33,12 +34,12 @@ class CheckoutSolution:
                     times = remaining // quality
                     total += times * price
                     remaining -= times * quality
-                    
+                total += remaining * prices[item]
                     
             else:
                 total += cnt * prices[item]
         return total
-# solution = CheckoutSolution()
+solution = CheckoutSolution()
 # print(solution.checkout("A"))
 # print(solution.checkout("AAA"))
 # print(solution.checkout("AAAA"))
@@ -46,3 +47,13 @@ class CheckoutSolution:
 # print(solution.checkout("AAABBB"))
 # print(solution.checkout("AAAABB12"))
 # print(solution.checkout(""))
+# print(solution.checkout("A"))
+# print(solution.checkout("AAA"))
+# print(solution.checkout("AAAAA"))
+# print(solution.checkout("AAAAAA"))
+# print(solution.checkout("AAAAAAAA"))
+# print(solution.checkout("EEB"))
+# print(solution.checkout("EEBB"))
+# print(solution.checkout("ABCDE"))
+# print(solution.checkout("A123"))
+
