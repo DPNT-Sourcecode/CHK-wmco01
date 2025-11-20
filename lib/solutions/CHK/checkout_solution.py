@@ -21,13 +21,20 @@ class CheckoutSolution:
                 return -1
             counts[ch] = counts.get(ch, 0) + 1
         total = 0
+        if "E" in counts:
+            free_b = counts["E"] // 2
+            if "B" in counts:
+                counts["B"] = max(0, counts["B"] - free_b)
+
         for item, cnt in counts.items():
             if item in offers:
-                offer_quality, offer_price = offers[item]
-                offer_times = cnt // offer_quality
-                remainder = cnt % offer_quality
-                total += offer_times * offer_price
-                total += remainder * prices[item]
+                remaining = cnt
+                for quality, price in offers[item]:
+                    times = remaining // quality
+                    total += times * price
+                    remaining -= times * quality
+                    
+                    
             else:
                 total += cnt * prices[item]
         return total
