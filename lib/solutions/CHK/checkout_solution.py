@@ -82,8 +82,9 @@ class CheckoutSolution:
         while len(group_counts) >= 3:
             total += 45
             group_counts = group_counts[3:]
-
         
+        for price in group_counts:
+            total += price
 
         for item, cnt in counts.items():
             if item in offers:
@@ -120,7 +121,7 @@ solution = CheckoutSolution()
 # print(solution.checkout("FFFFF"))
 # print(solution.checkout("FFFFFF"))
 
-print(solution.checkout("BB"))
+# print(solution.checkout("STXYZ"))
 # print(solution.checkout("FF"))
 # print(solution.checkout("FFF"))
 # print(solution.checkout("FFFF"))
@@ -156,6 +157,7 @@ print(solution.checkout("BB"))
 # | Y    | 10    |                        |
 # | Z    | 50    |                        |
 # +------+-------+------------------------
+
 
 
 
