@@ -72,7 +72,7 @@ class CheckoutSolution:
         group_counts = []
 
         for item in group_items:
-            for item in counts:
+            if item in counts:
                 for _ in range(counts[item]):
                     group_counts.append(prices[item])
                 counts[item] = 0
@@ -114,7 +114,7 @@ solution = CheckoutSolution()
 # print(solution.checkout("EEBB"))
 # print(solution.checkout("ABCDE"))
 # print(solution.checkout("A123"))
-# print(solution.checkout("F"))
+print(solution.checkout("AAA"))
 # print(solution.checkout("FF"))
 # print(solution.checkout("FFF"))
 # print(solution.checkout("FFFF"))
@@ -157,6 +157,7 @@ solution = CheckoutSolution()
 # | Y    | 10    |                        |
 # | Z    | 50    |                        |
 # +------+-------+------------------------
+
 
 
 
